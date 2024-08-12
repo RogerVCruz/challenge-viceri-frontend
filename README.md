@@ -6,12 +6,12 @@ Desafio Frontend desenvolvido utilizando Angular.
 
 ### Introdução
 
-Desenvolvi esse aplicativo que possibilita a criação de tarefas(TO-DO), ele conta com o rescurso de criação de contas de Usuário e autenticação. Para o funcionamento é necessário consumir a API Rest, segue o link com instruções de como configuar o [Backend](https://github.com/RogerVCruz/challenge-viceris).
+Desenvolvi esse aplicativo que possibilita a criação de tarefas(TO-DO), ele conta com o recurso de criação de contas de Usuário e autenticação. Para o funcionamento é necessário consumir a API Rest, segue o link com instruções de como configuar o [Backend](https://github.com/RogerVCruz/challenge-viceris).
 
 ### Melhorias
 
-- Implentas mensagem de sucesso no cadastro e login.
-- Implentas mensagem de erro no cadastro e login.
+- Implementar mensagem de sucesso no cadastro e login.
+- Implementar mensagem de erro no cadastro e login.
 
 ## Configuração do projeto
 
@@ -35,7 +35,7 @@ Se tudo ocorrer bem o servidor está rodando na seguinte URL:
 
 ---
 
-## **Documentação Swagger**
+## **Instruções de como utilizar**
 
 - **URL:** <br>
   localhost:4200/create <br>
