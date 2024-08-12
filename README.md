@@ -1,27 +1,56 @@
-# AngularTodoApp
+# Viceri-SEIDOR Challenge To-do List Fronted
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+## Descrição
 
-## Development server
+Desafio Frontend desenvolvido utilizando Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Introdução
 
-## Code scaffolding
+Desenvolvi esse aplicativo que possibilita a criação de tarefas(TO-DO), ele conta com o rescurso de criação de contas de Usuário e autenticação. Para o funcionamento é necessário consumir a API Rest, segue o link com instruções de como configuar o [Backend](https://github.com/RogerVCruz/challenge-viceris).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Melhorias
 
-## Build
+- Implentas mensagem de sucesso no cadastro e login.
+- Implentas mensagem de erro no cadastro e login.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Configuração do projeto
 
-## Running unit tests
+Para rodar a aplicação é necessário instalar as dependências utilizando o comando:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `yarn`
 
-## Running end-to-end tests
+Para rodar a aplicação em desenvolvimento você pode utilizar o comando:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- `ng serve` ou `yarn start`
 
-## Further help
+Se tudo ocorrer bem o servidor está rodando na seguinte URL:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- `localhost:4200`.
+
+## 🚀 Tecnologias
+
+- TypeScript
+- Angular
+- HTML + CSS
+
+---
+
+## **Documentação Swagger**
+
+- **URL:** <br>
+  localhost:4200/create <br>
+  Rota que permite a criação de uma nova conta de usuário.
+
+---
+
+- **URL:** <br>
+  localhost:4200/<br>
+  Rota que possibilitar fazer o login.
+
+---
+
+- **URL:** <br>
+  localhost:4200/todo <br>
+  Rota que permite acessar o a visualização, deleção e aleteração das tarefas(TO-DO).
+
+---
