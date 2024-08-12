@@ -1,0 +1,127 @@
+<div class="todo-container">
+  <div class="todo-header">
+    <h2 class="todo-title">To-do List</h2>
+  </div>
+
+  <div class="todo-options">
+    <div class="filter-options">
+      <button
+        class="button-status"
+        [class.active]="filterByStatus === ''"
+        (click)="onFilterByStatus('')"
+      >
+        ALL
+      </button>
+      <button
+        class="button-status"
+        [class.active]="filterByStatus === 'PENDING'"
+        (click)="onFilterByStatus('PENDING')"
+      >
+        PENDING
+      </button>
+      <button
+        class="button-status"
+        [class.active]="filterByStatus === 'DONE'"
+        (click)="onFilterByStatus('DONE')"
+      >
+        DONE
+      </button>
+    </div>
+    <button class="button-add-todo" (click)="openSlidePanel()">
+      <i class="add-todo"></i>
+      Add Todo
+    </button>
+  </div>
+
+  <div class="todo-list">
+    @for (item of todos; track $index) {
+    <app-todo-card
+      [status]="item.status"
+      [todo]="item"
+      (click)="onLoadTodoForm(item)"
+    ></app-todo-card>
+    }
+  </div>
+</div>
+
+<app-slide-panel
+  [headerText]="'Todo Details'"
+  [isOpen]="isSlidePanelOpen"
+  (onClose)="onCloseSlidePanel()"
+>
+  <form
+    [formGroup]="todoForm"
+    (ngSubmit)="onSubmit()"
+    autocomplete="off"
+    novalidate
+  >
+    <div class="form-group">
+      <label for="description" class="form-label">Description</label>
+      <input
+        name="description"
+        rows="10"
+        class="form-control"
+        [class.invalid]="
+          todoForm.get('description')?.hasError('required') &&
+          todoForm.get('description')?.touched
+        "
+        [class.valid]="todoForm.get('description')?.valid"
+        placeholder="Description"
+        formControlName="description"
+      />
+      @if (todoForm.get('description')?.hasError('required') &&
+      todoForm.get('description')?.touched) {
+      <span class="form-error">Description is required.</span>
+      }
+    </div>
+    <div class="form-group">
+      <label for="priority" class="form-label">Priority</label>
+      <select
+        class="form-select"
+        [class.invalid]="
+          todoForm.get('priority')?.hasError('required') &&
+          todoForm.get('priority')?.touched
+        "
+        [class.valid]="todoForm.get('priority')?.valid"
+        formControlName="priority"
+      >
+        @for (item of todoPriority; track $index) {
+        <option [value]="item">{{ item }}</option>
+        }
+      </select>
+      @if (todoForm.get('priority')?.hasError('required') &&
+      todoForm.get('priority')?.touched) {
+      <span class="form-error">Priority is required.</span>
+      }
+    </div>
+    <div class="form-group">
+      <label for="status" class="form-label">Status</label>
+      <select
+        class="form-select"
+        [class.invalid]="
+          todoForm.get('status')?.hasError('required') &&
+          todoForm.get('status')?.touched
+        "
+        [class.valid]="todoForm.get('status')?.valid"
+        formControlName="status"
+      >
+        @for (item of todoStatus; track $index) {
+        <option [value]="item">{{ item }}</option>
+        }
+      </select>
+      @if (todoForm.get('status')?.hasError('required') &&
+      todoForm.get('status')?.touched) {
+      <span class="form-error">Status is required.</span>
+      }
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="button-submit">Submit</button>
+      <button type="button" class="button-cancel" (click)="onCloseSlidePanel()">
+        Cancel
+      </button>
+      <button type="button" class="button-delete" (click)="onDeleteTask()">
+        Delete
+      </button>
+    </div>
+  </form>
+</app-slide-panel>

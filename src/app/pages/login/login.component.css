@@ -1,0 +1,79 @@
+/* Container geral */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título do login */
+.login-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333333;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Estilo dos grupos de formulário */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo dos rótulos */
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555555;
+}
+
+/* Estilo dos inputs */
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+.form-control.valid {
+  border-color: #28a745;
+}
+
+.form-control.invalid {
+  border-color: #dc3545;
+}
+
+
+.form-error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button-submit {
+  background-color: #FC5352;
+  color: #ffffff;
+}
+
+.button-submit:hover {
+  background-color: #DF4745;
+}
+
