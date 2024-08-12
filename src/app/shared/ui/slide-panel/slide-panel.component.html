@@ -1,0 +1,13 @@
+@if (isOpen) {
+<div class="backdrop">
+  <div class="slide-panel" [class.open]="isOpen">
+    <div class="header">
+      <h4 class="title">{{ headerText }}</h4>
+      <i class="close-icon" (click)="onClosePanel()"></i>
+    </div>
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
+}

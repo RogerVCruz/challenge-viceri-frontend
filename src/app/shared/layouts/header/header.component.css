@@ -1,0 +1,39 @@
+.app-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.header-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #ef5555;
+}
+
+
+.auth-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+
+.auth-item {
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #4b5563;
+  transition: background-color 0.2s ease;
+}
+
+.auth-item:hover {
+  background-color: #f3f4f6; /* Adiciona efeito de hover similar a hover:bg-gray-100 */
+}

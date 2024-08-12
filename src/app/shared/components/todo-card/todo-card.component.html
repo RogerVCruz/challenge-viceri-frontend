@@ -1,0 +1,16 @@
+<div class="todo-card">
+  <div class="status-indicator">
+    <h4 class="todo-description">{{ todo.description }}</h4>
+  </div>
+  <div class="status-label">
+    @if (status === 'PENDING') {
+    <div class="status-pending">
+      {{ status }}
+    </div>
+    } @if (status === 'DONE') {
+    <div class="status-done">
+      {{ status }}
+    </div>
+    }
+  </div>
+</div>

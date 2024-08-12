@@ -1,0 +1,12 @@
+<header class="app-header">
+  <div class="container">
+    <h4 class="header-title">Challenge Viceris</h4>
+    <div class="auth-links">
+      @if (this.isAuthenticated$ | async) {
+      <div class="auth-item" (click)="onLogout()">Logout</div>
+      }@else {
+      <div class="auth-item">Login</div>
+      }
+    </div>
+  </div>
+</header>

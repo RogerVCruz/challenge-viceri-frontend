@@ -1,0 +1,17 @@
+app-header {
+  display: block;
+}
+
+.app-wrapper {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
